@@ -1,3 +1,4 @@
+// This is a test for the git system
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
