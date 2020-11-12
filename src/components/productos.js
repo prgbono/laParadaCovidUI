@@ -36,19 +36,11 @@ const Sidebar = styled.aside`
 
 export const query = graphql`
     query($id: String!) {
-            allStrapiPropiedades( filter: { id: { eq: $id } }) {
+            allStrapiArticulos( filter: { id: { eq: $id } }) {
                 nodes {
                     nombre
                     descripcion
-                    wc
-                    estacionamiento
-                    habitaciones
                     precio
-                    agentes {
-                        nombre
-                        telefono
-                        email
-                    }
                     imagen {
                         sharp: childImageSharp {
                             fluid ( maxWidth: 700) {
@@ -61,7 +53,7 @@ export const query = graphql`
     }
 `
 
-const Propiedades = ({data: { allStrapiPropiedades: { nodes }}}) => {
+const Productos = ({data: { allStrapiArticulos: { nodes }}}) => {
 
     const { nombre, descripcion, wc, estacionamiento, habitaciones, agentes, imagen, precio } = nodes[0]
 
@@ -97,4 +89,4 @@ const Propiedades = ({data: { allStrapiPropiedades: { nodes }}}) => {
      );
 }
  
-export default Propiedades;
+export default Productos;

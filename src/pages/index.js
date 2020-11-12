@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import BackgroundImage from 'gatsby-background-image';
 import heroCSS from '../css/hero.module.css';
 import Encuentra from '../components/encuentra'
-import ListadoPropiedades from '../components/ListadoPropiedades'
+import ListadoProductos from '../components/ListadoProductos'
 
 const ImagenBackground = styled(BackgroundImage)`
     height: 600px;
@@ -43,7 +43,7 @@ const Index = () => {
 
             <Encuentra />
 
-            <ListadoPropiedades />
+            <ListadoProductos />
 
         </Layout>
         

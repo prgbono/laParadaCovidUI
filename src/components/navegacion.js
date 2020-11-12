@@ -41,9 +41,9 @@ const Navegacion = () => {
                 activeClassName="pagina-actual"
             >Nosotros</NavLink>
             <NavLink
-                to={'/propiedades'}
+                to={'/productos'}
                 activeClassName="pagina-actual"
-            >Propiedades</NavLink>
+            >Productos</NavLink>
         </Nav>
 
      );

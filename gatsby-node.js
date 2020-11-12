@@ -9,7 +9,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                     id
                 }
             }
-            allStrapiPropiedades {
+            allStrapiArticulos {
                 nodes {
                     nombre
                     id
@@ -18,7 +18,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
     `);
 
-    // console.log(JSON.stringify(resultado.data.allStrapiPropiedades ) );
+    // console.log(JSON.stringify(resultado.data.allStrapiArticulos ) );
 
     // Si no hay resultados
     if(resultado.errors) {
@@ -27,7 +27,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     // Si hay resultados generar los archivos estaticos
     const paginas = resultado.data.allStrapiPaginas.nodes;
-    const propiedades = resultado.data.allStrapiPropiedades.nodes;
+    const articulos = resultado.data.allStrapiArticulos.nodes;
 
     // crear los templates para paginas
     paginas.forEach( pagina => {
@@ -40,13 +40,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         })
     } )
 
-    // Crear los templates de propiedades
-    propiedades.forEach( propiedad => {
+    // Crear los templates de articulos
+    articulos.forEach( articulo => {
         actions.createPage({
-            path: urlSlug( propiedad.nombre ),
-            component: require.resolve('./src/components/propiedades.js'),
+            path: urlSlug( articulo.nombre ),
+            component: require.resolve('./src/components/productos.js'),
             context: {
-                id: propiedad.id
+                id: articulo.id
             }
         })
     } )

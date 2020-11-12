@@ -37,8 +37,8 @@ const Contenido = styled.div`
     }
 `
 
-const PropiedadPreview = ({propiedad}) => {
-    const { nombre,   imagen, wc, estacionamiento, habitaciones, precio } = propiedad;
+const ProductoPreview = ({producto}) => {
+    const { nombre, imagen, descripcion, precio } = producto;
     return ( 
 
         <Card>
@@ -51,13 +51,13 @@ const PropiedadPreview = ({propiedad}) => {
 
                 <p className="precio">$ {precio} </p>
 
-                <Iconos 
-                    wc={wc}
+                {/* <Iconos 
+                    nombre={nombre}
                     estacionamiento={estacionamiento}
                     habitaciones={habitaciones}
-                />
+                /> */}
                 <Boton to={ urlSlug( nombre ) }>
-                    Visitar Propiedad
+                    Ver Producto
                 </Boton>
 
             </Contenido>
@@ -65,4 +65,4 @@ const PropiedadPreview = ({propiedad}) => {
      );
 }
  
-export default PropiedadPreview;
+export default ProductoPreview;

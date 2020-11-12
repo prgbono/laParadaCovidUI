@@ -6,7 +6,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    'gatsby-plugin-emotion',
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -22,7 +22,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000,
-        contentTypes: ['propiedades', 'paginas', 'categorias']
+        contentTypes: ['articulos', 'paginas', 'categorias']
       }
     }
     // {

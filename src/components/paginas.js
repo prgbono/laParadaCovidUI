@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Image from 'gatsby-image';
 import Layout from './layout';
 import { graphql } from 'gatsby';
-import ListadoPropiedades from './listadoPropiedades';
+import ListadoProductos from './listadoProductos';
 
 const ContenidoPagina = styled.div`
     max-width: 1200px;
@@ -34,7 +34,7 @@ export const query = graphql`
   }
 `
 
-const Propiedades = ({data: {allStrapiPaginas: { nodes }}}) => {
+const Productos = ({data: {allStrapiPaginas: { nodes }}}) => {
 
     const { nombre, contenido, imagen} = nodes[0];
 
@@ -50,12 +50,12 @@ const Propiedades = ({data: {allStrapiPaginas: { nodes }}}) => {
                     </ContenidoPagina>
                 </main>
 
-                {nombre === "Propiedades" && (
-                    <ListadoPropiedades />
+                {nombre === "Productos" && (
+                    <ListadoProductos />
                 )}
                 
         </Layout>
      );
 }
  
-export default Propiedades;
+export default Productos;

@@ -13,13 +13,9 @@ const Header = () => {
                 publicURL
             }
         }
-    `);
-    // console.log(logo);
-
-      
+    `);      
 
     return ( 
-
         <header
             css={css`
                 background-color: #0D283B;
@@ -40,7 +36,7 @@ const Header = () => {
                 `}
             >
                 <Link to="/">
-                    <img src={logo.publicURL} alt="Logotipo Bienes Raices" />
+                    <img src={logo.publicURL} alt="Logotipo La Parada" />
                 </Link>
 
                 <Navegacion />
