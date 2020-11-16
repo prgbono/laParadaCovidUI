@@ -5,15 +5,14 @@ import { css } from '@emotion/core';
 
 const Header = () => {
 
-    // consultar el logo.svg
-
+    //logo
     const { logo } =  useStaticQuery( graphql `
-        query {
-            logo: file(relativePath: {eq: "logo.svg"}){
-                publicURL
-            }
+    query {
+        logo:file(relativePath: {eq: "logo.png"}){
+          publicURL
         }
-    `);      
+      }
+    `);  
 
     return ( 
         <header
@@ -36,7 +35,7 @@ const Header = () => {
                 `}
             >
                 <Link to="/">
-                    <img src={logo.publicURL} alt="Logotipo La Parada" />
+                    <img src={logo.publicURL} alt="La Parada" />
                 </Link>
 
                 <Navegacion />

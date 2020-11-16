@@ -8,18 +8,10 @@ const useProductos = () => {
                     nombre
                     descripcion
                     id
-                    # wc
                     precio
-                    # estacionamiento
-                    # habitaciones
                     categoria {
                         nombre
                     }
-                    # agentes {
-                    #     nombre
-                    #     telefono
-                    #     email
-                    # }
                     imagen {
                         sharp: childImageSharp {
                             fluid( maxWidth: 600, maxHeight: 400 ) {
@@ -31,7 +23,6 @@ const useProductos = () => {
             }
         }
     `);
-
     // console.log(datos);
 
     return datos.allStrapiArticulos.nodes.map(articulo => ({
@@ -39,10 +30,6 @@ const useProductos = () => {
         descripcion: articulo.descripcion,
         imagen: articulo.imagen,
         id: articulo.id,
-        // wc: articulo.wc,
-        // estacionamiento: articulo.estacionamiento,
-        // habitaciones: articulo.habitaciones,
-        // agentes: proparticuloiedad.agentes,
         precio: articulo.precio,
         categoria: articulo.categoria
     }))

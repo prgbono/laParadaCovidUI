@@ -22,7 +22,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000,
-        contentTypes: ['articulos', 'paginas', 'categorias']
+        contentTypes: ['articulos', 'paginas', 'categorias', 'detalle-pedido', 'pedido']
       }
     }
     // {

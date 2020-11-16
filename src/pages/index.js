@@ -4,8 +4,7 @@ import useInicio from '../hooks/useInicio';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import BackgroundImage from 'gatsby-background-image';
-import heroCSS from '../css/hero.module.css';
-import Encuentra from '../components/encuentra'
+import Banner from '../components/banner'
 import ListadoProductos from '../components/ListadoProductos'
 
 const ImagenBackground = styled(BackgroundImage)`
@@ -24,9 +23,6 @@ const Index = () => {
                 fluid={imagen.sharp.fluid}
                 fadeIn="soft"
             >
-                <div className={heroCSS.imagenbg}>
-                    <h1 className={heroCSS.titulo}> Venta de casas y departamentos exclusivos </h1>
-                </div>
             </ImagenBackground>
             <main>
                 <div css={css`
@@ -41,7 +37,7 @@ const Index = () => {
                 </div>
             </main>
 
-            <Encuentra />
+            <Banner />
 
             <ListadoProductos />
 

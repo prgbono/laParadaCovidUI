@@ -39,17 +39,17 @@ const Contenido = styled.div`
 
 const ProductoPreview = ({producto}) => {
     const { nombre, imagen, descripcion, precio } = producto;
+    // console.log('imagen: ', imagen );
     return ( 
 
         <Card>
-
             <Image
                 fluid={imagen.sharp.fluid}
             />
             <Contenido>
                 <h3>{nombre}</h3>
 
-                <p className="precio">$ {precio} </p>
+                <p className="precio">{precio}€</p>
 
                 {/* <Iconos 
                     nombre={nombre}
