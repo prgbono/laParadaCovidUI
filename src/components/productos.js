@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Image from 'gatsby-image';
-import Iconos from './iconos';
+// import Iconos from './iconos';
 import Layout from './layout';
 import { graphql } from 'gatsby';
 
@@ -55,7 +55,7 @@ export const query = graphql`
 
 const Productos = ({data: { allStrapiArticulos: { nodes }}}) => {
 
-    const { nombre, descripcion, wc, estacionamiento, habitaciones, agentes, imagen, precio } = nodes[0]
+    const { nombre, descripcion, imagen, precio } = nodes[0]
 
     return ( 
         <Layout>

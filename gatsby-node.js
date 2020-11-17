@@ -17,6 +17,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             }
         }
     `);
+    // TODO: Traer también Pedidos y detalle-pedidos?
 
     // console.log(JSON.stringify(resultado.data.allStrapiArticulos ) );
 

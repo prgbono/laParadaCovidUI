@@ -1,5 +1,5 @@
 import React from 'react';
-import Iconos from './iconos';
+// import Iconos from './iconos';
 import styled from '@emotion/styled';
 import Image from 'gatsby-image';
 import { Link } from 'gatsby';
@@ -38,7 +38,7 @@ const Contenido = styled.div`
 `
 
 const ProductoPreview = ({producto}) => {
-    const { nombre, imagen, descripcion, precio } = producto;
+    const { nombre, imagen, precio } = producto;
     // console.log('imagen: ', imagen );
     return ( 
 
