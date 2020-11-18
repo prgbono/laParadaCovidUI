@@ -1,5 +1,4 @@
 import React from 'react';
-// import Iconos from './iconos';
 import styled from '@emotion/styled';
 import Image from 'gatsby-image';
 import { Link } from 'gatsby';
@@ -8,7 +7,7 @@ import urlSlug from 'url-slug'
 const Boton = styled(Link)`
     margin-top: 2rem;
     padding: 1rem;
-    background-color: #75ab00;
+    background-color: #E77817;
     width: 100%;
     color: #fff;
     display: block;
@@ -33,8 +32,11 @@ const Contenido = styled.div`
     }
     .precio {
         font-size: 2rem;
-        color: #75AB00;
+        color: #0D283B;
     }
+`
+const ColorNombreProducto = styled.h3`
+    color: #0D283B
 `
 
 const ProductoPreview = ({producto}) => {
@@ -48,7 +50,7 @@ const ProductoPreview = ({producto}) => {
                 />
             </Link>
             <Contenido>
-                <h3>{nombre}</h3>
+                <ColorNombreProducto>{nombre}</ColorNombreProducto>
                 <p className="precio">{precio}€</p>
                 {/* <Iconos nombre={nombre} estacionamiento={estacionamiento} habitaciones={habitaciones}/> */}
                 <Boton to={ urlSlug( nombre ) }>

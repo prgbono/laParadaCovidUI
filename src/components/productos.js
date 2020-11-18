@@ -19,20 +19,20 @@ const Contenido = styled.div`
 const Sidebar = styled.aside`
     .precio {
         font-size: 2rem;
-        color: #75AB00;
+        color: #0D283B;
     }
-    .agente {
-        margin-top: 4rem;
-        border-radius: 2rem;
-        background-color:  #75AB00;
-        padding: 3rem;
+    .categoria {
+        margin-top: 1.5rem;
+        border-radius: 1rem;
+        background-color:  #E77817;
+        padding: 0.5rem;
         color: #FFF;
-
-        p {
-            margin: 0;
-        }
+        
     }
 `;
+const ColorNombreProducto = styled.h1`
+    color: #0D283B
+`
 
 export const query = graphql`
     query($id: String!) {
@@ -41,6 +41,10 @@ export const query = graphql`
                     nombre
                     descripcion
                     precio
+                    categoria{
+                      id
+                      nombre
+                    }
                     imagen {
                         sharp: childImageSharp {
                             fluid ( maxWidth: 700) {
@@ -55,11 +59,12 @@ export const query = graphql`
 
 const Productos = ({data: { allStrapiArticulos: { nodes }}}) => {
 
-    const { nombre, descripcion, imagen, precio } = nodes[0]
+    const { nombre, descripcion, imagen, precio, categoria } = nodes[0]
 
     return ( 
         <Layout>
-            <h1>{nombre}</h1>
+
+            <ColorNombreProducto>{nombre}</ColorNombreProducto>
             <Contenido>
                 <main>
                     <Image
@@ -69,6 +74,7 @@ const Productos = ({data: { allStrapiArticulos: { nodes }}}) => {
                 </main>
                 <Sidebar>
                     <p className="precio">{precio}€</p>
+                    <p className="categoria">{categoria.nombre}</p>
                 </Sidebar>
             </Contenido>
         
