@@ -41,27 +41,21 @@ const ProductoPreview = ({producto}) => {
     const { nombre, imagen, precio } = producto;
     // console.log('imagen: ', imagen );
     return ( 
-
         <Card>
-            <Image
-                fluid={imagen.sharp.fluid}
-            />
+            <Link to={ urlSlug( nombre ) }>
+                <Image
+                    fluid={imagen.sharp.fluid}
+                />
+            </Link>
             <Contenido>
                 <h3>{nombre}</h3>
-
                 <p className="precio">{precio}€</p>
-
-                {/* <Iconos 
-                    nombre={nombre}
-                    estacionamiento={estacionamiento}
-                    habitaciones={habitaciones}
-                /> */}
+                {/* <Iconos nombre={nombre} estacionamiento={estacionamiento} habitaciones={habitaciones}/> */}
                 <Boton to={ urlSlug( nombre ) }>
                     Ver Producto
                 </Boton>
-
             </Contenido>
-        </Card>
+        </Card> 
      );
 }
  

@@ -68,7 +68,7 @@ const Productos = ({data: { allStrapiArticulos: { nodes }}}) => {
                     <p>{descripcion}</p>
                 </main>
                 <Sidebar>
-                    <p className="precio">$ {precio}</p>
+                    <p className="precio">{precio}€</p>
                 </Sidebar>
             </Contenido>
         

@@ -30,14 +30,24 @@ const Index = () => {
                         margin: 0 auto;
                     `}
                 >
-                    <h1>{nombre}</h1>
                     <p css={css`
-                        text-align: center;
-                    `}>{contenido}</p>
+                        text-align: justify;
+                    `}>
+                    {/* Este 'contenido' es lo que iría en el campo Contenido de Strapi */}
+                        {/* {contenido} */}
+                        Mariscos La Parada cuida de proveer el mejor pescado y marisco al mejor precio y calidad. 
+                        Seleccionamos y compramos diaria y directamente desde lonjas del litoral onubense.                    
+                        Somos especialistas desde hace más de 40 años. Todo nuestro marisco está elaborado y preparado de forma tradicional y listo para consumir.
+                    </p>
+                    <p css={css`
+                        text-align: justify;
+                    `}>
+                        Dada la situación excepcional de pandemia que vivimos, queremos facilitar esta vía online a nuestros clientes para que puedan realizar sus compras desde la comodidad de sus casas y evitar aglomeraciones.
+                    </p>
                 </div>
             </main>
 
-            <Banner />
+            {/* <Banner /> */}
 
             <ListadoProductos />
 
