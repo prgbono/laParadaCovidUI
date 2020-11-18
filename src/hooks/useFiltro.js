@@ -18,23 +18,19 @@ const Select = styled.select`
 `;
 
 const useFiltro = () => {
-
     const [ categoria, guardarCategoria ] = useState('');
-
     const resultado = useStaticQuery(graphql`
         query {
             allStrapiCategorias {
-                    nodes {
-                        nombre
-                        id
-                    }
+                nodes {
+                    nombre
+                    id
+                }
             }
         }
     `);
 
     const categorias = resultado.allStrapiCategorias.nodes;
-
-    // console.log(categorias);
 
     const FiltroUI = () => (
         <Formulario>

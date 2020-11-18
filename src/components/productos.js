@@ -69,18 +69,6 @@ const Productos = ({data: { allStrapiArticulos: { nodes }}}) => {
                 </main>
                 <Sidebar>
                     <p className="precio">$ {precio}</p>
-                    {/* <Iconos 
-                        wc={wc}
-                        estacionamiento={estacionamiento}
-                        habitaciones={habitaciones}
-                    /> */}
-
-                    {/* <div className="agente">
-                        <h2>Vendedor:</h2>
-                        <p>{agentes.nombre}</p>
-                        <p>Tel: {agentes.telefono}</p>
-                        <p>Email: {agentes.email}</p>
-                    </div> */}
                 </Sidebar>
             </Contenido>
         

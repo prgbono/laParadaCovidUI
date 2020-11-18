@@ -35,9 +35,9 @@ export const query = graphql`
 `
 
 const Productos = ({data: {allStrapiPaginas: { nodes }}}) => {
-
     const { nombre, contenido, imagen} = nodes[0];
 
+    console.log('NOMBRE; ', nombre)
     return ( 
         <Layout>
                 <main className="contenedor">
@@ -49,6 +49,7 @@ const Productos = ({data: {allStrapiPaginas: { nodes }}}) => {
                         <p>{contenido} </p>
                     </ContenidoPagina>
                 </main>
+
 
                 {nombre === "Productos" && (
                     <ListadoProductos />

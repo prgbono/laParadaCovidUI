@@ -9,8 +9,7 @@ const ListadoProductos = () => {
 
     const resultado = useProductos();
     const [productos] = useState(resultado);
-    const [ filtradas, guardarFiltradas] = useState([]);
-    // filtrado de productos
+    const [filtradas, guardarFiltradas] = useState([]);
     const { categoria,  FiltroUI } = useFiltro();
 
     useEffect(() => {
@@ -20,9 +19,7 @@ const ListadoProductos = () => {
         } else {
             guardarFiltradas(productos);
         }
-    }, [categoria])
-
-    // console.log(productos)
+    }, [categoria, productos])
 
     return ( 
         <>
@@ -33,7 +30,7 @@ const ListadoProductos = () => {
             {FiltroUI() }
 
             <ul className={listadoProductoCSS.productos}>
-                { filtradas.map( producto => (
+                {filtradas.map( producto => (
                     <ProductoPreview 
                         key={producto.id}
                         producto={producto}
