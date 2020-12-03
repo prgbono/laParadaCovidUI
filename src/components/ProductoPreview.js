@@ -51,7 +51,7 @@ const ProductoPreview = ({producto}) => {
             </Link>
             <Contenido>
                 <ColorNombreProducto>{nombre}</ColorNombreProducto>
-                <p className="precio">{precio}€</p>
+                <p className="precio">Desde {precio}€</p>
                 {/* <Iconos nombre={nombre} estacionamiento={estacionamiento} habitaciones={habitaciones}/> */}
                 <Boton to={ urlSlug( nombre ) }>
                     Ver Producto
